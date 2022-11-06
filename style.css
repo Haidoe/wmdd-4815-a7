@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&family=Source+Sans+Pro&display=swap");
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+caption,
+th {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+}
+
+header,
+nav,
+main {
+  padding: 0.5rem;
+}
+
+header {
+  padding-top: 4em;
+  background-image: url("img/pexels-rama-khandkar-2113556.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+}
+
+nav ul,
+main,
+header h1 {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: lightgoldenrodyellow;
+  font-weight: 300;
+  padding: 0.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h2,
+h3,
+caption {
+  color: brown;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+nav {
+  background-color: aliceblue;
+  border-bottom: 1px solid rgba(0, 0, 60, 0.2);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.section-table {
+  position: relative;
+  box-shadow: 0 0 10px rgba(129, 129, 129, 0.234);
+  padding: 0.75rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+}
+
+th {
+  color: #17028b;
+  background-color: #f0f8ff;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+table {
+  /* I added padding which also took some width and I need to deduct it */
+  width: calc(800px - 1.5rem);
+}
+
+thead th {
+  font-weight: 700;
+  color: #fff;
+  background-color: #17028b;
+}
+
+#relative-example div {
+  background-color: aliceblue;
+  padding: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#absolute-example {
+  position: relative;
+}
+#absolute-example div {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+}
+
+aside {
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px 0 0 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+h4 {
+  border-bottom: 1px solid rgba(0, 0, 60, 0.3);
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    font-size: 2rem;
+    padding-top: 7em;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  #relative-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+    /* Note: this ensures that elements are vertically centered within their grid cells */
+    align-items: center;
+  }
+
+  #relative-example img {
+    position: relative;
+    right: -1rem;
+  }
+
+  #relative-example div {
+    position: relative;
+    left: -1rem;
+  }
+
+  #absolute-example div {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 1rem;
+  }
+}
